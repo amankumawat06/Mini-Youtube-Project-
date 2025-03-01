@@ -1,0 +1,652 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+.navbar{
+    color: #fff;
+    height: 4.4rem;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+.box1{
+    width: 25%;
+    padding: 4px;
+}
+
+.navbar .menu-icon{
+    font-size: 20px;
+    padding: 0px 10px 0px;
+    opacity: 0.8;
+}
+
+.navbar .menu-icon:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.navbar .nav-logo{
+    display: flex;
+    padding-left: 14px;
+}
+
+.navbar .nav-logo img{
+    height: 36px;
+    width: 45px;
+    cursor: pointer;
+}
+
+#logoName{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+sup{
+    opacity: 0.8;
+}
+
+.box2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+
+.navbar .search-bar input{
+    width: 550px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 0px 0px 0px 15px;
+    outline: none;
+    background-color: black;
+    border: 1px solid gray;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    color: #fff;
+    border-right: none;
+}
+
+.navbar .search-bar input:hover{
+    border: 1px solid blue;
+    box-shadow: 0px 0px 3px blue;
+}
+
+.navbar .search-icon{
+    width: 50px;
+    height: 40px;
+    background-color: #333;
+    text-align: center;
+    align-content: center;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.navbar .hoverEffect:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.navbar .voice-search{
+    height: 40px;
+    width: 40px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    margin-left: 20px;
+}
+
+.box3{
+    width: 25%;
+    display: flex;
+    justify-content: end;
+    padding: 2px;
+}
+
+.navbar .nav-create{
+    height: 40px;
+    background-color: #333;
+    line-height: 40px;
+    padding: 0.4rem;
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 0px 13px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.navbar .nav-create i{
+    padding-right:8px;
+}
+
+.navbar .notifications{
+    font-size: 1.3rem;
+    padding: 0px 25px 0px;
+}
+
+.navbar .login #login-box{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-size: 40px;
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 33px;
+    text-align: center;
+    align-content: center;
+}
+
+.navbar .login #login-box:hover{
+    box-shadow: 0px 0px 10px white;
+}
+
+.navbar .login #login-box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.responsiveSearchIcon{
+    padding: 7px;
+    font-size: 20px;
+    /* box-shadow: 0px 0px 4px white; */
+    display: none;
+    cursor: pointer;
+}
+
+.responsiveSearchIcon:hover{
+    opacity: 0.8;
+}
+
+        /* Responsive Navigation Bar */
+
+@media (max-width:1090px) {
+    .box2 .search-bar input{
+        max-width: 300px;
+    }
+}
+
+@media (max-width:768px) {
+    .box2 .search-bar input{
+        max-width: 200px;
+    }
+    .box3 .notifications{
+        padding: 0px 10px;
+    }
+}
+
+@media (max-width:680px) {
+    .box3 .notifications{
+        display: none;
+    }
+    .box3{
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+    .box3 .login #login-box{
+        margin-right: 0px;
+    }
+    .box1{
+        width: auto;
+    }
+    .box2 .voice-search{
+        display: none;
+    }
+}
+
+@media (max-width:580px){
+    .box2 .search-bar input{
+        max-width: 70px;
+    }
+}
+
+@media (max-width:440px) {
+    .responsiveSearchIcon{
+        display: block;
+    }
+    .box2 .search-bar input,.search-icon{
+        display: none;
+    }
+    .box3{
+        width: 170%;
+    }
+}
+
+@media (max-width:360px) {
+    .box1{
+        width: 52%;
+    }
+    .nav-logo #logoName{
+        font-size:18px ;
+        padding-top: 3px;
+    }
+}
+
+        /* Content */
+
+.contentContainer{
+    display: flex;
+    background-color: burlywood;
+    width: 100wh;
+    margin-top: 70px;
+}
+
+.slidebar{
+    height: 100vh;
+    width: 300px;
+    background-color: #000;
+    color: white;
+    overflow: auto;
+    padding: 10px 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    z-index: 2;
+    padding-bottom: 100px;
+}
+
+.main-box img{
+    font-size: 10px;
+    width: 50px;
+    padding: 5px 20px 0px 0px;
+    filter: brightness(0) invert(1);
+}
+
+.color img{
+    filter: brightness(1) invert(0);
+}
+
+.main-box p{
+    font-size: 18px;
+}
+
+.alignIntoOneLine{
+    display: flex;
+    align-items: center;
+}
+
+#style{
+    width: 40px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+
+.bottomSpace{
+    margin-bottom: 20px;
+}
+
+.topSpace{
+    margin-top: 15px;
+}
+
+.settings i{
+    font-size: 28px;
+    margin:10px 20px 0px 0px;
+}
+
+.main-box div{
+    padding: 4px 0px 4px 10px;
+}
+
+.main-box div:hover{
+    background-color: #333;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.removeBorder{
+    border: none !important;
+    background-color: transparent !important;
+    cursor: default;
+}
+
+.breakline{
+    border-top: 2px solid gray ;
+}
+
+
+.responsiveSidebar{
+    margin-left: 300px;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: center;
+    display: none;
+    position: fixed;
+    left: -300px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 5px 4px;
+}
+
+.responsiveSidebar div{
+    padding: 5px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.responsiveSidebar div:hover{
+    background-color: #333;
+}
+
+.responsiveSidebar img{
+    width: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.responsiveSidebar p{
+    font-size: 13px;
+}
+
+.rsb-profile{
+    margin-right: 6px;
+}
+
+.rsb-profile i{
+    font-size: 20px;
+}
+
+
+@media (max-width:840px) {
+    .slidebar{
+        width: 250px;
+    }
+}
+
+@media (max-width:700px) {
+    .slidebar{
+        width: 200px;
+    }
+}
+
+@media (max-width:650px) {
+    .slidebar{
+        display: none;
+    }
+    .responsiveSidebar{
+        display: block;
+    }
+}
+
+
+.mainContent{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 300px;
+    overflow: auto;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 840px) {
+    .mainContent {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+    .mainContent {
+        width: calc(100% - 200px);
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 650px) {
+    .mainContent {
+        width: 100%;
+        margin-left: 80px;
+    }
+}
+
+
+.suggestion-bar{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.sug{
+    height: 30px;
+    width: auto;
+    padding: 5px 5px;
+    color: white;
+    background-color: #000;
+    box-shadow: 0 0 2px #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    font-weight: 540;
+    flex-shrink: 0;
+}
+
+.mainVideos,.shortsVideos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+
+.vdo{
+    position: relative;
+    height: 180px;
+    width: 320px;
+    box-shadow: 0px 0px 2px #fff;
+    margin-bottom:125px;
+    border-radius: 10px;
+}
+
+.vdo video::-webkit-media-controls {
+    display: none ;
+}
+
+.custom-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.vdo:hover .custom-controls {
+    display: block;
+}
+
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 1px;
+    font-size: 18px;
+}
+
+.vdo video{
+    height: inherit;
+    width: inherit;
+    padding: 0px 2px 2px 0px;
+    border-radius: 10px;
+}
+
+.vdoDetails{
+    display: flex;
+    margin-top: 5px;
+}
+
+.userProfile{
+    height: 35px;
+    width: 40px;
+    box-shadow: 0 0 2px #fff;
+    border-radius: 50%;
+}
+
+.userProfile img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.userDetails{
+    padding: 5px;
+    padding-top: 0;
+    line-height: 20px;
+}
+
+.vdoName{
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.chennalName, .views{
+    opacity: 0.8;
+}
+
+
+.shorts{
+    display: block;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 20px;
+}
+
+.shorts img{
+    width: 30px;
+}
+
+.shorts i{
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.shorts i:hover{
+    opacity: 0.8;
+}
+
+.first{
+    display: flex;
+    align-items: center;
+}
+
+#shortsName{
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.shortsVideos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.short1{
+    height: 390px;
+    width: 235px;
+    box-shadow: 0 0 4px #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #333;
+    margin-bottom: 100px;
+}
+
+.short1 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.short1 video::-webkit-media-controls{
+    display: none;
+}
+
+.short1 video:hover{
+    cursor: pointer;
+}
+
+@media (max-width:1100px) {
+    .mainVideos{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .shortsVideos{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+}
+
+@media (max-width:990px) {
+    .vdo{
+        width: 270px;
+        height: 170px;
+    }
+}
+
+@media (max-width:890px) {
+    .vdo{
+        width: 230px;
+        height: 170px;
+    }   
+}
+
+@media (max-width:760px) {
+    .vdo{
+        width: 220px;
+        height: 170px;
+    }
+    .short1{
+        height: 330px;
+        width: 180px;
+    }
+}
