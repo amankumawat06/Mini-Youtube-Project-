@@ -417,7 +417,7 @@ sup{
 @media (max-width: 840px) {
     .mainContent {
         width: calc(100% - 250px);
-        margin-left: 230px;
+        margin-left: 250px;
     }
 }
 
